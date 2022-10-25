@@ -17,19 +17,27 @@ const Slider = () => {
   if (!Array.isArray(aboutMy) || length <= 0) {
     return null;
   }
-
   return (
-    <div id="about" className="px-48">
-      <h1 className="text-3xl font-bold">About</h1>
-      <div className="relative flex justify-center p-[17rem]">
-        {aboutMy.map((slide, index) => {
-          return (
+    <div id="about" className=" py-12">
+      <h1 className="text-3xl font-bold pb-8">About</h1>{" "}
+      {aboutMy.map((slide, index) => {
+        return (
+          <div
+            key={index}
+            className={`relative flex justify-center items-center shadow-2xl `}
+            style={{
+              backgroundImage: `url(${slide.background})`,
+              backgroundAttachment: "fixed",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-white/80 z-[2]" />
             <div
-              key={index}
               className={
                 index === current
-                  ? `opacity-[1] ease-in duration-1000`
-                  : `opacity-0`
+                  ? `opacity-[1] p-36 z-[2] ease-in duration-1000`
+                  : `opacity-0 `
               }
             >
               <FaArrowCircleLeft
@@ -39,14 +47,7 @@ const Slider = () => {
               />
               {index === current && (
                 <div className="flex flex-row gap-4 items-center">
-                  <p className="text-lg ">{slide.text}</p>
-                  <Image
-                    src={slide.icon}
-                    alt="/"
-                    width={50}
-                    height={50}
-                    layout="fixed"
-                  />
+                  <span className="text-lg ">{slide.text}</span>
                 </div>
               )}
               <FaArrowCircleRight
@@ -55,9 +56,9 @@ const Slider = () => {
                 className="absolute top-[50%] right-[30px] text-black/70 cursor-pointer select-none z-[2]"
               />
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

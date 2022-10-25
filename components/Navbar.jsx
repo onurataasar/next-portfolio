@@ -75,19 +75,29 @@ const Navbar = () => {
         >
           <ul>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="/">Home</Link>
+              <Link href="/">
+                <a onClick={handleOpenMenu}>Home</a>
+              </Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="/#about">About</Link>
+              <Link href="/#about">
+                <a onClick={handleOpenMenu}>About</a>
+              </Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="/#projects">Projects</Link>
+              <Link href="/#projects">
+                <a onClick={handleOpenMenu}>Projects</a>
+              </Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="/#skills">Skills</Link>
+              <Link href="/#skills">
+                <a onClick={handleOpenMenu}>Skills</a>
+              </Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-400">
-              <Link href="/#links">Links</Link>
+              <Link href="/#links">
+                <a onClick={handleOpenMenu}>Links</a>
+              </Link>
             </li>
           </ul>
         </div>
