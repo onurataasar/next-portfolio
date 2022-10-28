@@ -19,12 +19,12 @@ const Slider = () => {
   }
   return (
     <div id="about" className=" py-12">
-      <h1 className="text-3xl font-bold pb-8">About</h1>{" "}
+      <h1 className="text-3xl font-bold pb-4 ml-8">About</h1>{" "}
       {aboutMy.map((slide, index) => {
         return (
           <div
             key={index}
-            className={`relative flex justify-center items-center shadow-2xl `}
+            className={`relative flex justify-center items-center  mx-8 shadow-2xl `}
             style={{
               backgroundImage: `url(${slide.background})`,
               backgroundAttachment: "fixed",
@@ -32,11 +32,11 @@ const Slider = () => {
               backgroundSize: "cover",
             }}
           >
-            <div className="absolute top-0 left-0 right-0 bottom-0 bg-white/80 z-[2]" />
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-white/90 z-[2]" />
             <div
               className={
                 index === current
-                  ? `opacity-[1] p-36 z-[2] ease-in duration-1000`
+                  ? `opacity-[1] sm:p-36 p-16 z-[2] min-h-[70vh] flex ease-in duration-1000`
                   : `opacity-0 `
               }
             >

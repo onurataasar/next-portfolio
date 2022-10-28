@@ -2,8 +2,8 @@ export const aboutMy = [
   {
     text: (
       <div>
-        <h1 className="text-6xl">backstory</h1>
-        <h4 className="font-semibold p-4 text-lg ">
+        <h1 className="about-title">backstory</h1>
+        <h4 className="about-text">
           I am a passionate software developer. My first preference would be
           front-end development <span className="font-bold ">React</span> or
           mobile development (React Native, Flutter). However, I am also open to
@@ -17,8 +17,8 @@ export const aboutMy = [
   {
     text: (
       <div>
-        <h1 className="text-6xl">education</h1>
-        <h4 className="font-semibold p-4 text-lg ">
+        <h1 className="about-title">education</h1>
+        <h4 className="about-text">
           Akdeniz University Computer Science Engineering Bachelors Degree
         </h4>
       </div>
@@ -28,8 +28,8 @@ export const aboutMy = [
   {
     text: (
       <div>
-        <h1 className="text-6xl">personality</h1>
-        <ul className="font-semibold p-4 text-xl ">
+        <h1 className="about-title">personality</h1>
+        <ul className="about-text">
           <li>Team Player</li>
           <li>Easy-Going,</li>
           <li>Fast Learner</li>
@@ -42,8 +42,8 @@ export const aboutMy = [
   {
     text: (
       <div>
-        <h1 className="text-6xl">future</h1>
-        <h4 className="font-semibold p-4 text-xl ">
+        <h1 className="about-title">future</h1>
+        <h4 className="about-text">
           in web development, side mobile projects front-end development{" "}
           <span className="font-bold ">React</span> or mobile development (React
           Native, Flutter). However, I am also open to learning the other areas,

@@ -18,3 +18,11 @@ html {
 .custom-img {
   background-image: url("https://images.unsplash.com/photo-1618477388954-7852f32655ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
 }
+
+.about-title {
+  @apply text-4xl p-4 sm:text-6xl text-center lg:text-left;
+}
+
+.about-text {
+  @apply font-medium p-4 text-lg text-center lg:text-left;
+}
