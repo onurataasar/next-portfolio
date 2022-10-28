@@ -26,3 +26,10 @@ html {
 .about-text {
   @apply font-medium p-4 text-lg text-center lg:text-left;
 }
+
+.section-title {
+  @apply text-3xl font-bold pb-4 ml-8 sm:ml-16;
+}
+
+.divider {
+}
