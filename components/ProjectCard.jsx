@@ -3,9 +3,9 @@ import React from "react";
 
 const ProjectCard = (props) => {
   return (
-    <div className="card-container relative sm:self-auto self-stretch sm:min-w-[36rem] min-w-[24rem] shadow-2xl">
+    <div className="card-container relative  sm:self-auto self-stretch sm:min-w-[30rem] min-w-[24rem] shadow-2xl">
       <div
-        className="z-[1] absolute top-0 bottom-0 right-0 left-0 bg-black/90 flex flex-col gap-6
+        className="card z-[1] absolute top-0 bottom-0 right-0 left-0 bg-black/90 hidden flex-col gap-6
       justify-center items-center min-w-fit"
       >
         <h1 className="font-bold text-4xl">{props.name}</h1>
