@@ -12,12 +12,32 @@ const Projects = () => {
       className="py-28 h-screen overflow-hidden bg-black/70 text-white "
     >
       <h1 className="section-title">Projects</h1>
-      <ScrollContainer className="project-container cursor-pointer">
-        <ProjectCard logo={Buggy} name="Buggy" />
-        <ProjectCard logo={LifeChanger} name="LifeChanger" />
-        <ProjectCard logo={Superior} name="Superior" />
-        <ProjectCard logo={Buggy} name="Buggy" />
-        <ProjectCard logo={Buggy} name="Buggy" />
+      <ScrollContainer className="project-container">
+        <ProjectCard
+          logo={Buggy}
+          name="Buggy"
+          github="https://www.github.com/onurataasar/buggy"
+        />
+        <ProjectCard
+          logo={LifeChanger}
+          name="LifeChanger"
+          github="https://www.github.com/onurataasar/react-lifechanger"
+        />
+        <ProjectCard
+          logo={Superior}
+          name="Superior"
+          github="https://www.github.com/onurataasar/superior"
+        />
+        <ProjectCard
+          logo={Buggy}
+          name="Buggy"
+          github="https://www.github.com/onurataasar/buggy"
+        />
+        <ProjectCard
+          logo={Buggy}
+          name="Buggy"
+          github="https://www.github.com/onurataasar/buggy"
+        />
       </ScrollContainer>
     </div>
   );

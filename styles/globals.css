@@ -39,7 +39,7 @@ html {
 
 .project-container {
   @apply grid grid-flow-col 
-  justify-start  items-center w-3/4 mx-auto
+  justify-start  items-center w-11/12 mx-auto
   gap-12  min-h-full mt-8
    overflow-x-scroll;
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectCard = (props) => {
   return (
@@ -13,12 +14,17 @@ const ProjectCard = (props) => {
           Lorem ipsum, dolor sit ament. Project short information.
         </p>
         <div className="flex flex-row gap-5">
-          <button className="rounded-lg bg-green-800 hover:bg-green-600 px-4 py-1">
+          <button className="rounded-lg bg-green-800 hover:bg-green-600 px-8 py-1">
             Details
           </button>
-          <button className="rounded-lg bg-green-800 hover:bg-green-600 px-4 py-1">
-            Github
-          </button>
+          <a
+            href={props.github}
+            rel="noreferrer"
+            target="_blank"
+            className="rounded-lg bg-green-800 text-2xl hover:bg-green-600 flex py-1 justify-center items-center px-12 "
+          >
+            <FaGithub />
+          </a>
         </div>
       </div>
       <div className="z-0">
