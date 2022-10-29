@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import Divider from "../components/Divider";
 import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 import Slider from "../components/Slider";
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       </Head>
       <Hero heading="Onur Ata Asar" message="Frontend Web Developer" />
       <Slider />
+      <Divider />
+      <Projects />
     </div>
   );
 }

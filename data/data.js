@@ -6,8 +6,7 @@ export const aboutMy = [
         <h4 className="about-text">
           I am a passionate software developer. My first preference would be
           front-end development <span className="font-bold ">React</span> or
-          mobile development (React Native, Flutter). However, I am also open to
-          learning the other areas, as well.
+          mobile development.
         </h4>
       </div>
     ),
@@ -45,9 +44,7 @@ export const aboutMy = [
         <h1 className="about-title">future</h1>
         <h4 className="about-text">
           in web development, side mobile projects front-end development{" "}
-          <span className="font-bold ">React</span> or mobile development (React
-          Native, Flutter). However, I am also open to learning the other areas,
-          as well.
+          <span className="font-bold ">React</span> or mobile development
         </h4>
       </div>
     ),

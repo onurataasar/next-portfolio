@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-
+import Turkish from "../assets/turkish.svg";
+import English from "../assets/english.svg";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-
+  const [flag, setFlag] = useState(true);
   const [style, setStyle] = useState("transparent");
   const [textStyle, setTextStyle] = useState("white");
 
@@ -25,6 +26,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleStyle);
   }, []);
 
+  const onLangClick = () => {
+    setFlag(!flag);
+  };
+
   return (
     <div
       style={{ backgroundColor: `${style}` }}
@@ -37,7 +42,7 @@ const Navbar = () => {
           </h1>
         </Link>
 
-        <ul className="hidden sm:flex" style={{ color: `${textStyle}` }}>
+        <ul className="hidden sm:flex " style={{ color: `${textStyle}` }}>
           <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
             <Link href="/">Home </Link>
           </li>
@@ -51,7 +56,16 @@ const Navbar = () => {
             <Link href="/#skills">Skills</Link>
           </li>
           <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/#links">Links</Link>
+            <Link href="/#contact">Contact</Link>
+          </li>
+          <li className="mx-4 mt-3 cursor-pointer px-[5px]">
+            <button onClick={onLangClick}>
+              {flag ? (
+                <Turkish width="30px" height="30px" />
+              ) : (
+                <English width="30px" height="30px" />
+              )}
+            </button>
           </li>
         </ul>
 
@@ -61,9 +75,15 @@ const Navbar = () => {
           className="block sm:hidden z-10 cursor-pointer"
         >
           {menu ? (
-            <AiOutlineClose size={30} style={{ color: `${textStyle}` }} />
+            <AiOutlineClose
+              size={30}
+              style={{ color: `${textStyle}`, marginRight: "10px" }}
+            />
           ) : (
-            <AiOutlineMenu size={30} style={{ color: `${textStyle}` }} />
+            <AiOutlineMenu
+              size={30}
+              style={{ color: `${textStyle}`, marginRight: "10px" }}
+            />
           )}
         </div>
         <div
