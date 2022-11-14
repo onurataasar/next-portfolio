@@ -7,9 +7,9 @@ export const aboutMy = [
           Front-End Developer with a proven ability to collaborate effectively
           with senior developers while spending extra time to be mentored. I
           have more than two years of experience with
-          <span className="font-bold ">JavaScript and web development</span> and
-          I have more than a year of experience with{" "}
-          <span className="font-bold ">ReactJS</span>.
+          <span className="font-bold "> JavaScript and web development </span>
+          and I have more than a year of experience with
+          <span className="font-bold "> ReactJS</span>.
         </h4>
       </div>
     ),
