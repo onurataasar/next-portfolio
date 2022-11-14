@@ -14,9 +14,9 @@ const ProjectCard = (props) => {
           Lorem ipsum, dolor sit ament. Project short information.
         </p>
         <div className="flex flex-row gap-5">
-          <button className="rounded-lg bg-green-800 hover:bg-green-600 px-8 py-1">
+          {/*           <button className="rounded-lg bg-green-800 hover:bg-green-600 px-8 py-1">
             Details
-          </button>
+          </button> */}
           <a
             href={props.github}
             rel="noreferrer"

@@ -28,16 +28,6 @@ const Projects = () => {
           name="Superior"
           github="https://www.github.com/onurataasar/superior"
         />
-        <ProjectCard
-          logo={Buggy}
-          name="Buggy"
-          github="https://www.github.com/onurataasar/buggy"
-        />
-        <ProjectCard
-          logo={Buggy}
-          name="Buggy"
-          github="https://www.github.com/onurataasar/buggy"
-        />
       </ScrollContainer>
     </div>
   );
