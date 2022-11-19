@@ -3,12 +3,42 @@ import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Turkish from "../assets/turkish.svg";
 import English from "../assets/english.svg";
+import { motion, AnimateSharedLayout } from "framer-motion";
+
+const links = [
+  { name: "Home", href: "/", scroll: true },
+  { name: "About", href: "/#about", scroll: false },
+  { name: "Projects", href: "/#projects", scroll: false },
+  { name: "Skills", href: "/#skills", scroll: false },
+  { name: "Contact", href: "/#contact", scroll: false },
+];
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [flag, setFlag] = useState(true);
   const [style, setStyle] = useState("transparent");
   const [textStyle, setTextStyle] = useState("white");
+  const [selected, setSelected] = useState(0);
 
+  const MenuItem = ({ text, selected, onClick, href, scroll }) => (
+    <Link href={href} scroll={scroll}>
+      <motion.div
+        style={{ color: `${textStyle}` }}
+        className="menu-item"
+        onClick={onClick}
+        animate={{ opacity: selected ? 1 : 0.5 }}
+      >
+        {text}
+
+        {selected && (
+          <motion.div
+            className={`underline bg-${textStyle}`}
+            layoutId="underline"
+          />
+        )}
+      </motion.div>
+    </Link>
+  );
   const handleOpenMenu = () => {
     setMenu(!menu);
   };
@@ -38,34 +68,30 @@ const Navbar = () => {
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <h1 style={{ color: `${textStyle}` }} className="font-bold text-4xl">
-            O.A.Asar <span className="text-sm font-light">(in progress)</span>
+            O.A.Asar{" "}
+            {/* <span className="text-sm font-light">(in progress)</span> */}
           </h1>
         </Link>
-
         <ul className="hidden sm:flex " style={{ color: `${textStyle}` }}>
-          <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/">Home </Link>
-          </li>
-          <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/#about" scroll={false}>
-              About
-            </Link>
-          </li>
-          <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/#projects" scroll={false}>
-              Projects
-            </Link>
-          </li>
-          <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/#skills" scroll={false}>
-              Skills
-            </Link>
-          </li>
-          <li className="m-4 border-b-white hover:border-b pb-[3px] px-[5px] ">
-            <Link href="/#contact" scroll={false}>
-              Contact
-            </Link>
-          </li>
+          <div className="underlined-menu">
+            <div className="wrapper">
+              <AnimateSharedLayout>
+                {links.map((link, index) => (
+                  <MenuItem
+                    key={index}
+                    scroll={link.scroll}
+                    href={link.href}
+                    text={link.name}
+                    selected={selected === index}
+                    onClick={() => {
+                      setSelected(index);
+                    }}
+                  />
+                ))}
+              </AnimateSharedLayout>
+            </div>
+          </div>
+
           <li className="mx-4 mt-3 cursor-pointer px-[5px]">
             <button onClick={onLangClick}>
               {flag ? (

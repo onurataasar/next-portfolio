@@ -20,7 +20,7 @@ const Slider = () => {
   }
   return (
     <div id="about" className="">
-      <div className="pt-28 pb-28">
+      <div className="pt-24 pb-28">
         <h1 className="section-title">About</h1>{" "}
         {aboutMy.map((slide, index) => {
           return (
